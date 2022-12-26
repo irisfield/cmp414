@@ -80,7 +80,7 @@ class NeuralNetwork:
         """
         size = 40 # size of progress bar
         x = int((size * i) / total) # i as a percentage of size
-        print(f"{i:0{len(str(total))}}/{total} [{'='*x}{'.'*(size-x)}] - mse: {mse:.2f}",
+        print(f"{i:0{len(str(total))}}/{total} [{'='*x}{'-'*(size-x)}] - mse: {mse:.2f}",
               end = "\r", file = sys.stdout, flush = True)
 
     def _mse(self, x_test, y_test, epoch, epochs):
